@@ -1,6 +1,6 @@
 import express from 'express'
 import HomePage from './components/HomePage.js'
-import validateInput from './model/validateInput.js'
+import { validateDay, validateMonth, validateYear } from './model/validationFactory.js'
 
 const app = express()
 app.listen(3000, () => console.log('Listening on port 3000'))
@@ -19,8 +19,13 @@ app.post('/input', (req, res) => {
 	const year = req.body.YYYY
 	console.log(req.body)
 
-	const validateOutput = validateInput(+day, +month, +year)
-	console.log(validateOutput)
+	// const validateOutput = validateInput(+day, +month, +year)
+	const dayCheck = validateDay(+day, +month, +year)
+	const monthCheck = validateMonth(+month)
+	const yearCheck = validateYear(+year)
+	console.log('dayCheck: ', dayCheck)
+	console.log('monthCheck: ', monthCheck)
+	console.log('yearCheck: ', yearCheck)
 
 	res.send(`
 <div>${year} years</div>
