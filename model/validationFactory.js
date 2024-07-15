@@ -14,7 +14,9 @@ const validationFactory = (time) => {
 			if (day !== 0 && !day) {
 				returnObj.message = genericMessage + 'day'
 			}
-			if (day > new Date().getDate()) {
+			if (dateObj.getFullYear() === new Date().getFullYear() &&
+				dateObj.getMonth() === new Date().getMonth() &&
+				dateObj > new Date()) {
 				returnObj.message = pastMessage
 			}
 			if (dateObj.getDate() && dateObj.getDate() !== day) {
@@ -25,7 +27,8 @@ const validationFactory = (time) => {
 			if (month !== 0 && !month) {
 				returnObj.message = genericMessage + 'month'
 			}
-			if (month > new Date().getMonth() + 1) {
+			if (year === new Date().getFullYear() &&
+				month > new Date().getMonth() + 1) {
 				returnObj.message = pastMessage
 			}
 			if (month < 1 || month > 12) {

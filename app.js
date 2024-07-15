@@ -21,7 +21,7 @@ app.post('/input', (req, res) => {
 
 	// const validateOutput = validateInput(+day, +month, +year)
 	const dayCheck = validateDay(+day, +month, +year)
-	const monthCheck = validateMonth(+month)
+	const monthCheck = validateMonth(+month, +year)
 	const yearCheck = validateYear(+year)
 	console.log('dayCheck: ', dayCheck)
 	console.log('monthCheck: ', monthCheck)
