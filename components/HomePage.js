@@ -26,6 +26,7 @@ ${ReactiveCard('YEAR', 'YYYY')}
 <button type='submit'>Submit date!</button>
 </form>
 
+<hr>
 <div class='display'>
   <div id='year'>-- years</div>
   <div id='month'>-- months</div>

@@ -16,10 +16,16 @@ body {
 .main-card {
 	display: flex;
 	flex-direction: column;
+	padding: 2rem;
 }
 
 .reactive-card {
 	display: flex;
+	margin-bottom: 2rem;
+}
+
+.display {
+	margin-top: 2rem;
 }
 
 .attribution {
