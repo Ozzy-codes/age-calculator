@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/input', (req, res) => {
-	//	TODO: need to update logic to validate input before replacing display card
+	//	TODO: run check on inputs and send back appropriate message or value
 	const day = req.body.DD
 	const month = req.body.MM
 	const year = req.body.YYYY
@@ -26,6 +26,15 @@ app.post('/input', (req, res) => {
 	console.log('dayCheck: ', dayCheck)
 	console.log('monthCheck: ', monthCheck)
 	console.log('yearCheck: ', yearCheck)
+
+	if (!dayCheck.pass || !monthCheck.pass || !yearCheck.pass) {
+		res.setHeader('hx-reswap', 'none')
+		return res.send(`
+<div id="DAY-message" hx-swap-oob='true'>${dayCheck.message}</div>
+<div id="MONTH-message" hx-swap-oob='true'>${monthCheck.message}</div>
+<div id="YEAR-message" hx-swap-oob='true'>${yearCheck.message}</div>
+`)
+	}
 
 	res.send(`
 <div>${year} years</div>

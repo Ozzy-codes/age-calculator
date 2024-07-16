@@ -7,6 +7,7 @@ type="text"
 placeholder="${abv}"
 name="${abv}"
 /></label>
+<div id='${name}-message'></div>
 </div>
 `
 }

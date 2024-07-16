@@ -1,5 +1,6 @@
 import ReactiveCard from "./ReactiveCard.js"
 
+//  TODO: Add require to inputs
 const HomePage = () => {
 	return `
 <!DOCTYPE html>
