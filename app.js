@@ -40,5 +40,9 @@ app.post('/input', (req, res) => {
 <div>${year} years</div>
 <div>${month} months</div>
 <div>${day} days</div>
+
+<div id="DAY-message" hx-swap-oob='true'></div>
+<div id="MONTH-message" hx-swap-oob='true'></div>
+<div id="YEAR-message" hx-swap-oob='true'></div>
 `)
 })
