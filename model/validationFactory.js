@@ -58,7 +58,7 @@ const validationFactory = (time) => {
 			if (yearInt > new Date().getFullYear()) {
 				returnObj.message = pastMessage
 			}
-			if (yearInt.toString().length < 4) {
+			if (yearInt.toString().length < 4 || year.length > 4) {
 				returnObj.message = 'Please enter a year in YYYY format'
 			}
 			if (yearInt !== 0 && !yearInt || yearInt < 0) {
