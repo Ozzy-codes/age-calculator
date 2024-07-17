@@ -1,6 +1,7 @@
 import express from 'express'
 import HomePage from './components/HomePage.js'
 import { validateDay, validateMonth, validateYear } from './model/validationFactory.js'
+import getAge from './model/getAge.js'
 
 const app = express()
 app.listen(3000, () => console.log('Listening on port 3000'))
@@ -35,11 +36,12 @@ app.post('/input', (req, res) => {
 <div id="YEAR-message" hx-swap-oob='true'>${yearCheck.message}</div>
 `)
 	}
+	const returnObj = getAge(day, month, year)
 
 	res.send(`
-<div>${year} years</div>
-<div>${month} months</div>
-<div>${day} days</div>
+<div>${returnObj.calculatedYear} years</div>
+<div>${returnObj.calculatedMonth} months</div>
+<div>${returnObj.calculatedDay} days</div>
 
 <div id="DAY-message" hx-swap-oob='true'></div>
 <div id="MONTH-message" hx-swap-oob='true'></div>
