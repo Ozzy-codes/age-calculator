@@ -42,6 +42,18 @@ const getAge = (birthDay, birthMonth, birthYear) => {
 			calculatedDay = (new Date(currYear, currMonth + 1, 0).getDate()) - currDay + birthDayInt
 		}
 		return { calculatedYear, calculatedMonth, calculatedDay }
+	} else if (monthDiff < 0) {
+		calculatedYear = currYear - birthYearInt
+		calculatedMonth = currMonth - birthMonthInt
+		if (dayDiff === 0) {
+			calculatedDay = 0
+		} else if (dayDiff < 0) {
+			calculatedDay = currDay - birthDayInt
+		} else {
+			calculatedDay = (new Date(currYear, birthMonthInt + 1, 0).getDate()) - birthDayInt + currDay
+			calculatedMonth -= 1
+		}
+		return { calculatedYear, calculatedMonth, calculatedDay }
 	}
 }
 
