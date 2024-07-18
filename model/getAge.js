@@ -25,15 +25,18 @@ const getAge = (birthDay, birthMonth, birthYear) => {
 			calculatedDay = birthDayInt - currDay
 		} else {
 			calculatedYear = currYear - birthYearInt - 1
-			calculatedMonth = 12
+			calculatedMonth = 11
 			calculatedDay = (new Date(currYear, currMonth + 1, 0).getDate()) - currDay + birthDayInt
 		}
 		console.log('output year, month, day: ', calculatedYear, calculatedMonth, calculatedDay)
 		return { calculatedYear, calculatedMonth, calculatedDay }
 	} else if (monthDiff > 0) {
 		calculatedYear = currYear - birthYearInt - 1
-		calculatedMonth = 12 - birthMonthInt + currMonth
-		if (dayDiff >= 0) {
+		calculatedMonth = 12 - birthMonthInt + currMonth - 1
+		if (dayDiff === 0) {
+			calculatedMonth += 1
+			calculatedDay = 0
+		} else if (dayDiff > 0) {
 			calculatedDay = birthDayInt - currDay
 		} else {
 			calculatedDay = (new Date(currYear, currMonth + 1, 0).getDate()) - currDay + birthDayInt
