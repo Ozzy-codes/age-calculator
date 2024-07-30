@@ -1,7 +1,7 @@
 import { it, expect } from "vitest"
 import getAge from "./getAge"
 
-it('should get correct age if birth month is = to the current month and the birth day of the month is the same day as today', () => {
+it('should get correct age if birth month is === to the current month and the birth day of the month is the same day as today', () => {
 	const day = new Date().getDate()
 	const month = ((new Date().getMonth() + 1) % 13) || 1
 	const year = new Date().getFullYear() - 1
@@ -9,6 +9,21 @@ it('should get correct age if birth month is = to the current month and the birt
 	const output = getAge(day, month, year)
 
 	expect(output.calculatedDay).toBe(0)
+	expect(output.calculatedMonth).toBe(0)
+	expect(output.calculatedYear).toBe(1)
+})
+it('should get correct age if birth month is === to the current month and the birth day of the month is < today', () => {
+	//	TODO: write a better test to handle 1st of the month
+	const day = new Date().getDate()
+	if (day === 1) return
+	const updatedDay = day - 1
+	const month = ((new Date().getMonth() + 1) % 13) || 1
+	const year = new Date().getFullYear() - 1
+
+
+	const output = getAge(updatedDay, month, year)
+
+	expect(output.calculatedDay).toBe(1)
 	expect(output.calculatedMonth).toBe(0)
 	expect(output.calculatedYear).toBe(1)
 })
