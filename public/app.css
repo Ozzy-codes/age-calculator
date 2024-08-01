@@ -13,14 +13,13 @@ body {
 	align-items: center;
 }
 
+button {}
+
 .main-card {
-	display: flex;
-	flex-direction: column;
 	padding: 2rem;
 }
 
 .reactive-card {
-	display: flex;
 	margin-bottom: 2rem;
 }
 
@@ -35,4 +34,20 @@ body {
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+/* Utilities */
+
+.flex {
+	display: flex;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.align_button {
+	position: absolute;
+	transform: translate(0, -50%);
+	right: 0;
 }

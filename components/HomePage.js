@@ -15,18 +15,24 @@ const HomePage = () => {
   <title>Age calculator app</title>
 </head>
 <body>
-<div class='main-card'>
-<form class="reactive-card"
+<div class='flex column main-card'>
+<form class="flex column reactive-card"
 hx-post='/input'
 hx-target='.display'
 >
+<div class="flex">
 ${ReactiveCard('DAY', 'DD')}
 ${ReactiveCard('MONTH', 'MM')}
 ${ReactiveCard('YEAR', 'YYYY')}
-<button type='submit'>Submit date!</button>
+</div>
+<div style="margin-top: 1.5rem; position: relative;">
+  <hr>
+  <button class="align_button" type='submit'>
+<img src="assets/images/icon-arrow.svg" alt="Calculate Age">
+</button>
+</div>
 </form>
 
-<hr>
 <div class='display'>
   <div id='year'>-- years</div>
   <div id='month'>-- months</div>
