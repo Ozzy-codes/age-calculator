@@ -42,7 +42,7 @@ it('should get correct age if birth month is === to the current month and the bi
 	expect(output.calculatedMonth).toBe(11)
 	expect(output.calculatedYear).toBe(0)
 })
-it('should get correct age if birth month is > than current month and the birth day of the month is the same day as today', () => {
+it('should get correct age if birth month is > than current month and the birth day of the month is the === day as today', () => {
 	const day = new Date().getDate()
 	const month = new Date().getMonth() + 2
 	const year = new Date().getFullYear() - 1
@@ -67,6 +67,21 @@ it('should get correct age if birth month is > than current month and the birth 
 
 	expect(output.calculatedDay).toBe(calculatedDay)
 	expect(output.calculatedMonth).toBe(10)
+	expect(output.calculatedYear).toBe(0)
+})
+it('should get correct age if birth month is > than current month and the birth day of the month is < today', () => {
+	const day = new Date().getDate() - 1
+	const month = new Date().getMonth() + 2
+	const year = new Date().getFullYear() - 1
+	const currentDay = new Date().getDate()
+	const currentMonth = new Date().getMonth()
+	const calculatedDay = (new Date(year + 1, currentMonth, 0).getDate()) - currentDay + day
+	if (day < 1) return
+
+	const output = getAge(day, month, year)
+
+	expect(output.calculatedDay).toBe(calculatedDay)
+	expect(output.calculatedMonth).toBe(11)
 	expect(output.calculatedYear).toBe(0)
 })
 it('should get correct age if birth month is < than the current month and birth day of the month is the same as today', () => {
