@@ -40,8 +40,29 @@ button * {
 	width: 2rem;
 }
 
+form input {
+	width: 8rem;
+	height: 3rem;
+	padding: 1rem;
+	font-size: 20px;
+	font-weight: 700;
+	border: var(--neutral_light_grey) 1px solid;
+	border-radius: .5rem;
+}
+
+form label>div:first-child {
+	font-weight: 400;
+	font-size: 11px;
+	letter-spacing: 2px;
+}
+
+hr {
+	border: var(--neutral_light_grey) 1px solid;
+}
+
 .main-card {
 	background: var(--neutral_white);
+	width: 35rem;
 	padding: 2rem;
 	border-radius: 1rem 1rem 7rem 1rem;
 }
@@ -50,8 +71,12 @@ button * {
 	margin-bottom: 2rem;
 }
 
-.reactive-card div:first-child {
+.reactive-card>div:first-child {
 	color: var(--neutral_smokey_grey);
+}
+
+.reactive-card>div:first-child>*+* {
+	margin-left: 1rem;
 }
 
 .display {
