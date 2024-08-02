@@ -1,7 +1,7 @@
 const ReactiveCard = (name, abv) => {
 	return `
 <div id='${name}-card'>
-  <label>${name}
+  <label><div>${name}</div>
   <input 
 type="text"
 placeholder="${abv}"

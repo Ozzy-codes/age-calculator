@@ -50,6 +50,10 @@ button * {
 	margin-bottom: 2rem;
 }
 
+.reactive-card div:first-child {
+	color: var(--neutral_smokey_grey);
+}
+
 .display {
 	font-size: 4rem;
 	font-weight: 700;
