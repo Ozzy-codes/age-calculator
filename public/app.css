@@ -1,3 +1,4 @@
+/*	TODO: Need to set up styles on input erros*/
 * {
 	margin: 0;
 	padding: 0;
@@ -30,6 +31,7 @@ button {
 	border-radius: 50%;
 	padding: .75rem;
 	background: var(--primary_purple);
+	cursor: pointer;
 }
 
 button:active {
