@@ -10,6 +10,9 @@ const HomePage = () => {
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   <script src="/htmx.js" defer></script>
   
   <title>Age calculator app</title>
@@ -34,9 +37,9 @@ ${ReactiveCard('YEAR', 'YYYY')}
 </form>
 
 <div class='display'>
-  <div id='year'>-- years</div>
-  <div id='month'>-- months</div>
-  <div id='day'>-- days</div>
+  <div id='year'><span>- -</span> years</div>
+  <div id='month'><span>- -</span> months</div>
+  <div id='day'><span>- -</span> days</div>
 </div>
   
   <div class="attribution">

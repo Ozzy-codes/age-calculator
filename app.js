@@ -39,9 +39,9 @@ app.post('/input', (req, res) => {
 	const returnObj = getAge(day, month, year)
 
 	res.send(`
-<div>${returnObj.calculatedYear} years</div>
-<div>${returnObj.calculatedMonth} months</div>
-<div>${returnObj.calculatedDay} days</div>
+<div><span>${returnObj.calculatedYear}</span> years</div>
+<div><span>${returnObj.calculatedMonth}</span> months</div>
+<div><span>${returnObj.calculatedDay}</span> days</div>
 
 <div id="DAY-message" hx-swap-oob='true'></div>
 <div id="MONTH-message" hx-swap-oob='true'></div>
