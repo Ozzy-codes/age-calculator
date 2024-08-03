@@ -14,6 +14,7 @@ const HomePage = () => {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   <script src="/htmx.js" defer></script>
+  <script src="/messagesStyle.js" defer></script>
   
   <title>Age calculator app</title>
 </head>

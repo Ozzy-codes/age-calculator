@@ -129,3 +129,11 @@ label+div {
 .margin-top {
 	margin-top: .25rem;
 }
+
+.warning {
+	color: var(--primary_light_red)
+}
+
+.bg_warning {
+	border-color: var(--primary_light_red);
+}
