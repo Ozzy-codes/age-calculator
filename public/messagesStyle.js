@@ -6,7 +6,8 @@ for (const item of msgList) {
 	const targetInput = document.querySelector(`#${item}-card input`)
 	console.log(`${item} targets:`, target, targetTitle, targetInput)
 	document.addEventListener("htmx:afterSwap", () => {
-		if (target.innerText.length === 0) {
+		//	BUG:	The message div is geting replaced so the condition below always evaluates true, need to consider different approach for triggering class additions. May have to replace the entire div with classes and retain the values first entered.
+		if (target.innerText.length > 0) {
 			targetTitle.classList.add("warning")
 			targetInput.classList.add("bg_warning")
 		} else {

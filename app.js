@@ -1,5 +1,7 @@
 import express from 'express'
 import HomePage from './components/HomePage.js'
+import PassInput from './components/PassInput.js'
+import FailInput from './components/FailInput.js'
 import { validateDay, validateMonth, validateYear } from './model/validationFactory.js'
 import getAge from './model/getAge.js'
 
@@ -18,22 +20,21 @@ app.post('/input', (req, res) => {
 	const day = req.body.DD
 	const month = req.body.MM
 	const year = req.body.YYYY
-	console.log(req.body)
 
-	// const validateOutput = validateInput(+day, +month, +year)
 	const dayCheck = validateDay(day, month, year)
 	const monthCheck = validateMonth(month, year)
 	const yearCheck = validateYear(year)
-	console.log('dayCheck: ', dayCheck)
-	console.log('monthCheck: ', monthCheck)
-	console.log('yearCheck: ', yearCheck)
+
+	const dayRes = dayCheck.pass ? `${PassInput("DAY", "DD", day)}` : `${FailInput("DAY", "DD", day, dayCheck.message)}`
+	const monthRes = monthCheck.pass ? `${PassInput("MONTH", "MM", month)}` : `${FailInput("MONTH", "MM", month, monthCheck.message)}`
+	const yearRes = yearCheck.pass ? `${PassInput("YEAR", "YYYY", year)}` : `${FailInput("YEAR", "YYYY", year, yearCheck.message)}`
 
 	if (!dayCheck.pass || !monthCheck.pass || !yearCheck.pass) {
 		res.setHeader('hx-reswap', 'none')
 		return res.status(422).send(`
-<div class="margin-top warning" id="DAY-message" hx-swap-oob='true'>${dayCheck.message}</div>
-<div class="margin-top warning" id="MONTH-message" hx-swap-oob='true'>${monthCheck.message}</div>
-<div class="margin-top warning" id="YEAR-message" hx-swap-oob='true'>${yearCheck.message}</div>
+${dayRes} 
+${monthRes}
+${yearRes}
 `)
 	}
 	const returnObj = getAge(day, month, year)
@@ -43,8 +44,8 @@ app.post('/input', (req, res) => {
 <div><span>${returnObj.calculatedMonth}</span> months</div>
 <div><span>${returnObj.calculatedDay}</span> days</div>
 
-<div id="DAY-message" hx-swap-oob='true'></div>
-<div id="MONTH-message" hx-swap-oob='true'></div>
-<div id="YEAR-message" hx-swap-oob='true'></div>
+${dayRes}
+${monthRes}
+${yearRes}
 `)
 })
