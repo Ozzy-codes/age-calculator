@@ -19,3 +19,7 @@
 html.html
 js.js
 node_modules
+fly.toml
+Dockerfile
+.dockerignore
+.github
