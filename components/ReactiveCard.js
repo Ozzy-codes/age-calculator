@@ -4,6 +4,7 @@ const ReactiveCard = (name, abv) => {
   <label><div>${name}</div>
   <input 
 type="text"
+class="margin-top"
 placeholder="${abv}"
 name="${abv}"
 /></label>

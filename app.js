@@ -31,9 +31,9 @@ app.post('/input', (req, res) => {
 	if (!dayCheck.pass || !monthCheck.pass || !yearCheck.pass) {
 		res.setHeader('hx-reswap', 'none')
 		return res.status(422).send(`
-<div id="DAY-message" hx-swap-oob='true'>${dayCheck.message}</div>
-<div id="MONTH-message" hx-swap-oob='true'>${monthCheck.message}</div>
-<div id="YEAR-message" hx-swap-oob='true'>${yearCheck.message}</div>
+<div class="margin-top"id="DAY-message" hx-swap-oob='true'>${dayCheck.message}</div>
+<div class="margin-top"id="MONTH-message" hx-swap-oob='true'>${monthCheck.message}</div>
+<div class="margin-top"id="YEAR-message" hx-swap-oob='true'>${yearCheck.message}</div>
 `)
 	}
 	const returnObj = getAge(day, month, year)
