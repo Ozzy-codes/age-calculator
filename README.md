@@ -60,6 +60,7 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 - Near the beginning of this project I decided that I wanted to try out development via TDD, and it has been a really reassuring process. Not only do I feel confident that my unit does what it is intended to do, but I like the additional consequence of unit documentation. 
 - Developing this app with a simple web API that just moves around strings, and leveraging the power of Htmx is fun, simple, and interesting. I'm looking forward to building simple apps that can quickly be powered by htmx.
 - Writing a custom js event handler is not as easy when working with elements that are being replaced by htmx, even if you use htmx events. e.g.  *I have left the client script in my project for education purposes, I am not using the script in production*
+
 **client JS**
 ```
 const msgList = ["DAY", "MONTH", "YEAR"]
@@ -125,9 +126,6 @@ ${yearRes}
 - I'm looking forward to trying out a different backend on this project or an other one, I'm considering [Go](https://go.dev/). 
 
 ### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
