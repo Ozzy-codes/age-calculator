@@ -18,7 +18,7 @@ const HomePage = () => {
   <title>Age calculator app</title>
 </head>
 <body>
-<div class='flex column main-card'>
+<main class='flex column main-card'>
 <form class="flex column reactive-card"
 hx-post='/input'
 hx-target='.display'
@@ -46,7 +46,7 @@ ${ReactiveCard('YEAR', 'YYYY')}
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/Ozzy-codes">Ozzy-codes</a>.
   </div>
-</div>
+</main>
 	<script>
 		document.addEventListener("DOMContentLoaded", event => {
 			document.body.addEventListener('htmx:beforeSwap', function (evt) {

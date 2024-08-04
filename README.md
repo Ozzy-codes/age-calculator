@@ -15,8 +15,6 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -36,14 +34,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Desktop](./design/screenshots/Screenshot 2024-08-04 at 14.50.17.png)
+![Mobile](./design/screenshots/Screenshot 2024-08-04 at 14.53.53.png)
 
 ### Links
 
-- Solution URL: [Submission]()
-- Live Site URL: [Demo Site](https://age-calculator.fly.dev)
+- Solution URL: [Frontend Submission](https://www.frontendmentor.io/solutions/hmtx-and-nodejs---age-calculator-app-2XNmjOym4a)
+- Live Site URL: [live Site - hosted on Fly.io](https://age-calculator.fly.dev)
 
 ## My process
 
