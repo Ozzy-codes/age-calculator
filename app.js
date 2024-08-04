@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/input', (req, res) => {
-	//	TODO: run check on inputs and send back appropriate message or value
 	const day = req.body.DD
 	const month = req.body.MM
 	const year = req.body.YYYY

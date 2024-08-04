@@ -1,4 +1,3 @@
-/*	TODO: Need to set up styles on input erros*/
 * {
 	margin: 0;
 	padding: 0;
@@ -100,6 +99,11 @@ label+div {
 	color: var(--primary_purple);
 }
 
+.button_container {
+	position: relative;
+	margin-top: 1.5rem;
+}
+
 .attribution {
 	margin-top: 1rem;
 	font-size: 11px;
@@ -136,4 +140,37 @@ label+div {
 
 .bg_warning {
 	border-color: var(--primary_light_red);
+}
+
+/* @media rules */
+@media (max-width:375px) {
+	form input {
+		width: 5rem;
+		font-size: 16px;
+	}
+
+	button {
+		padding: 1.25rem;
+	}
+
+	.main-card {
+		width: 90%;
+	}
+
+	.reactive-card>div:first-child {
+		justify-content: space-between;
+	}
+
+	.display {
+		font-size: 3rem;
+		margin-top: 2rem;
+	}
+
+	.align_button {
+		transform: translate(-150%, -50%);
+	}
+
+	.button_container {
+		margin-top: 4rem;
+	}
 }

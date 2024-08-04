@@ -28,7 +28,7 @@ ${ReactiveCard('DAY', 'DD')}
 ${ReactiveCard('MONTH', 'MM')}
 ${ReactiveCard('YEAR', 'YYYY')}
 </div>
-<div style="margin-top: 1.5rem; position: relative;">
+<div class="button_container">
   <hr>
   <button class="align_button" type='submit'>
 <img src="assets/images/icon-arrow.svg" alt="Calculate Age">

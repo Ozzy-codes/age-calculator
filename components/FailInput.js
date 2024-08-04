@@ -7,6 +7,7 @@ const FailInput = (name, abv, value, msg) => {
 	type="text"
 	class="margin-top bg_warning"
 	value="${value}"
+	placeholder="${abv}"
 	name="${abv}"
 	/>
 	</label>
