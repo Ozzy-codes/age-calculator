@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./design/screenshots/Screenshot 2024-08-04 at 14.50.17.png)
-![Mobile](./design/screenshots/Screenshot 2024-08-04 at 14.53.53.png)
+<img src="design/screenshots/Screenshot 2024-08-04 at 14.50.17.png" alt="Desktop Screenshot">
+<img src="design/screenshots/Screenshot 2024-08-04 at 14.53.53.png" alt="Mobile ScreenShot">
 
 ### Links
 
