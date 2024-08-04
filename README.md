@@ -59,7 +59,7 @@ Users should be able to:
 - Writing a custom js event handler is not as easy when working with elements that are being replaced by htmx, even if you use htmx events. e.g.  *I have left the client script in my project for education purposes, I am not using the script in production*
 
 **client JS**
-```
+```javascript
 const msgList = ["DAY", "MONTH", "YEAR"]
 
 for (const item of msgList) {
@@ -79,8 +79,8 @@ for (const item of msgList) {
 	})
 }
 ```
-**node js**
-```
+**First node js iteration**
+```javascript
 app.post('/input', (req, res) => {
 	const day = req.body.DD
 	const month = req.body.MM
@@ -97,22 +97,22 @@ app.post('/input', (req, res) => {
 	if (!dayCheck.pass || !monthCheck.pass || !yearCheck.pass) {
 		res.setHeader('hx-reswap', 'none')
 		return res.status(422).send(`
-${dayRes} 
-${monthRes}
-${yearRes}
-`)
+		${dayRes} 
+		${monthRes}
+		${yearRes}
+		`)
 	}
 	const returnObj = getAge(day, month, year)
 
 	res.send(`
-<div><span>${returnObj.calculatedYear}</span> years</div>
-<div><span>${returnObj.calculatedMonth}</span> months</div>
-<div><span>${returnObj.calculatedDay}</span> days</div>
-
-<div id="DAY-message" hx-swap-oob='true'></div>
-<div id="MONTH-message" hx-swap-oob='true'></div>
-<div id="YEAR-message" hx-swap-oob='true'></div>
-`)
+	<div><span>${returnObj.calculatedYear}</span> years</div>
+	<div><span>${returnObj.calculatedMonth}</span> months</div>
+	<div><span>${returnObj.calculatedDay}</span> days</div>
+	
+	<div id="DAY-message" hx-swap-oob='true'></div>
+	<div id="MONTH-message" hx-swap-oob='true'></div>
+	<div id="YEAR-message" hx-swap-oob='true'></div>
+	`)
 })
 ```
 - Thus far it seems that if I involve styling in my state, that it is better to let htmx to handle it rather than to write custom js to create event listeners to add to a classlist.
