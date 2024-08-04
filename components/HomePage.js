@@ -44,7 +44,7 @@ ${ReactiveCard('YEAR', 'YYYY')}
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Ozzy-codes</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Ozzy-codes">Ozzy-codes</a>.
   </div>
 </div>
 	<script>
